@@ -111,9 +111,9 @@
   }
   /* PHONE (≤640): single column */
   @media (max-width:640px){
-    .photoslot{max-height:230px!important;}
+    .photoslot{max-width:min(100%,300px)!important;}
   }
-  .photoslot{max-height:340px;}
+  .photoslot{width:100%;max-width:460px;margin:0 auto;}
   @media (max-width:640px){
     .bento{grid-template-columns:1fr!important;grid-auto-rows:minmax(0,auto)!important;}
     .bento>section,.bento>section.wide{grid-column:span 1!important;}
@@ -229,15 +229,15 @@
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex:none;">
           <div style="display:flex;align-items:center;gap:10px;min-width:0;"><div style="width:30px;height:30px;border-radius:9px;background:var(--acs,rgba(250,90,42,.1));color:var(--ac,#FA5A2A);display:flex;align-items:center;justify-content:center;font-size:17px;flex:none;"><i class="ph-fill ph-heartbeat"></i></div><div style="display:flex;flex-direction:column;"><span style="font-family:Archivo;font-weight:700;font-size:14px;color:var(--tx,#201D19);letter-spacing:-.01em;line-height:1.1;">Activity</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;color:var(--tx3,#A69D92);margin-top:3px;text-transform:uppercase;">Today's goals</span></div></div>
         </div>
-        <div style="display:flex;align-items:center;gap:14px;flex:1;">
-          <div style="position:relative;width:148px;height:148px;flex:none;">
-            <svg viewBox="0 0 160 160" width="148" height="148" style="display:block;"><g transform="rotate(-90 80 80)"><circle cx="80" cy="80" r="64" fill="none" stroke="var(--sf2,#F4F1EB)" stroke-width="13"></circle><circle cx="80" cy="80" r="48" fill="none" stroke="var(--sf2,#F4F1EB)" stroke-width="13"></circle><circle cx="80" cy="80" r="32" fill="none" stroke="var(--sf2,#F4F1EB)" stroke-width="13"></circle><circle cx="80" cy="80" r="64" fill="none" style="stroke:var(--ac,#FA5A2A);" stroke-width="13" stroke-linecap="round" stroke-dasharray="402.12" stroke-dashoffset="70.77"></circle><circle cx="80" cy="80" r="48" fill="none" stroke="#F5A524" stroke-width="13" stroke-linecap="round" stroke-dasharray="301.59" stroke-dashoffset="69.06"></circle><circle cx="80" cy="80" r="32" fill="none" stroke="#16B981" stroke-width="13" stroke-linecap="round" stroke-dasharray="201.06" stroke-dashoffset="60.32"></circle></g></svg>
-            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-family:Archivo;font-weight:800;font-size:22px;color:var(--tx,#201D19);line-height:1;">82%</span><span style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.12em;color:var(--tx3,#A69D92);margin-top:3px;">GOAL</span></div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;flex:1;min-width:0;">
+          <div style="position:relative;width:clamp(112px,40%,148px);aspect-ratio:1;flex:none;">
+            <svg viewBox="0 0 160 160" width="100%" height="100%" style="display:block;"><g transform="rotate(-90 80 80)"><circle cx="80" cy="80" r="72" fill="none" stroke="var(--sf2,#F4F1EB)" stroke-width="11"></circle><circle cx="80" cy="80" r="56" fill="none" stroke="var(--sf2,#F4F1EB)" stroke-width="11"></circle><circle cx="80" cy="80" r="40" fill="none" stroke="var(--sf2,#F4F1EB)" stroke-width="11"></circle><circle cx="80" cy="80" r="72" fill="none" style="stroke:var(--ac,#FA5A2A);" stroke-width="11" stroke-linecap="round" stroke-dasharray="452.39" stroke-dashoffset="81.43"></circle><circle cx="80" cy="80" r="56" fill="none" stroke="#F5A524" stroke-width="11" stroke-linecap="round" stroke-dasharray="351.86" stroke-dashoffset="80.58"></circle><circle cx="80" cy="80" r="40" fill="none" stroke="#16B981" stroke-width="11" stroke-linecap="round" stroke-dasharray="251.33" stroke-dashoffset="75.40"></circle></g></svg>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;"><span style="font-family:Archivo;font-weight:800;font-size:21px;color:var(--tx,#201D19);line-height:1;">82%</span><span style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.12em;color:var(--tx3,#A69D92);margin-top:3px;">GOAL</span></div>
           </div>
-          <div style="display:flex;flex-direction:column;gap:13px;flex:1;min-width:0;">
-            <div style="display:flex;align-items:center;gap:9px;"><span style="width:9px;height:9px;border-radius:3px;background:var(--ac,#FA5A2A);flex:none;"></span><span style="font-size:12px;color:var(--tx2,#6E665C);flex:1;">Steps</span><span style="font-family:Archivo;font-weight:700;font-size:14px;color:var(--tx,#201D19);">8,240</span></div>
-            <div style="display:flex;align-items:center;gap:9px;"><span style="width:9px;height:9px;border-radius:3px;background:#F5A524;flex:none;"></span><span style="font-size:12px;color:var(--tx2,#6E665C);flex:1;">Calories</span><span style="font-family:Archivo;font-weight:700;font-size:14px;color:var(--tx,#201D19);">540</span></div>
-            <div style="display:flex;align-items:center;gap:9px;"><span style="width:9px;height:9px;border-radius:3px;background:#16B981;flex:none;"></span><span style="font-size:12px;color:var(--tx2,#6E665C);flex:1;">Active</span><span style="font-family:Archivo;font-weight:700;font-size:14px;color:var(--tx,#201D19);">42m</span></div>
+          <div style="display:flex;flex-direction:column;gap:13px;flex:1 1 136px;min-width:136px;">
+            <div style="display:flex;align-items:center;gap:7px;"><span style="width:8px;height:8px;border-radius:3px;background:var(--ac,#FA5A2A);flex:none;"></span><span style="font-size:12px;color:var(--tx2,#6E665C);flex:1;min-width:0;">Steps</span><span style="font-family:Archivo;font-weight:700;font-size:14px;color:var(--tx,#201D19);">8,240</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><span style="width:8px;height:8px;border-radius:3px;background:#F5A524;flex:none;"></span><span style="font-size:12px;color:var(--tx2,#6E665C);flex:1;min-width:0;">Calories</span><span style="font-family:Archivo;font-weight:700;font-size:14px;color:var(--tx,#201D19);">540</span></div>
+            <div style="display:flex;align-items:center;gap:7px;"><span style="width:8px;height:8px;border-radius:3px;background:#16B981;flex:none;"></span><span style="font-size:12px;color:var(--tx2,#6E665C);flex:1;min-width:0;">Active</span><span style="font-family:Archivo;font-weight:700;font-size:14px;color:var(--tx,#201D19);">42m</span></div>
             <div style="height:1px;background:var(--bd,#EAE4DC);margin:1px 0;"></div>
             <div style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--tx3,#A69D92);letter-spacing:.04em;">{{ ringsLabel }}</div>
           </div>
@@ -297,7 +297,7 @@
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex:none;"><div style="display:flex;align-items:center;gap:10px;min-width:0;"><div style="width:30px;height:30px;border-radius:9px;background:var(--acs,rgba(250,90,42,.1));color:var(--ac,#FA5A2A);display:flex;align-items:center;justify-content:center;font-size:17px;flex:none;"><i class="ph-fill ph-flame"></i></div><div style="display:flex;flex-direction:column;"><span style="font-family:Archivo;font-weight:700;font-size:14px;color:var(--tx,#201D19);letter-spacing:-.01em;line-height:1.1;">Calories</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;color:var(--tx3,#A69D92);margin-top:3px;text-transform:uppercase;">{{ calEaten }} / {{ calGoal }} kcal</span></div></div><span style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--ac,#FA5A2A);">{{ calPct }}</span></div>
         <div style="display:flex;flex-direction:column;align-items:center;flex:1;">
           <div style="position:relative;width:118px;height:118px;flex:none;margin-bottom:14px;"><svg viewBox="0 0 120 120" width="118" height="118" style="display:block;"><g transform="rotate(-90 60 60)"><circle cx="60" cy="60" r="44" fill="none" stroke="var(--sf2,#F4F1EB)" stroke-width="12"></circle><circle cx="60" cy="60" r="44" fill="none" style="stroke:var(--ac,#FA5A2A);" stroke-width="12" stroke-linecap="round" stroke-dasharray="276.46" stroke-dashoffset="{{ calOffset }}"></circle></g></svg><div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-family:Archivo;font-weight:800;font-size:24px;color:var(--tx,#201D19);line-height:1;">{{ calLeft }}</span><span style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;color:var(--tx3,#A69D92);margin-top:3px;">KCAL LEFT</span></div></div>
-          <div style="width:100%;display:flex;flex-direction:column;gap:9px;"><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:var(--tx2,#6E665C);font-weight:600;">Protein</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">132 / 160g</span></div><div style="height:6px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:82%;border-radius:4px;background:var(--ac,#FA5A2A);"></div></div></div><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:var(--tx2,#6E665C);font-weight:600;">Carbs</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">190 / 240g</span></div><div style="height:6px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:79%;border-radius:4px;background:#F5A524;"></div></div></div><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:var(--tx2,#6E665C);font-weight:600;">Fat</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">58 / 70g</span></div><div style="height:6px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:83%;border-radius:4px;background:#8B5CF6;"></div></div></div></div>
+          <div style="width:100%;display:flex;flex-direction:column;gap:9px;"><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:var(--tx2,#6E665C);font-weight:600;">Protein</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">{{ mProteinText }}</span></div><div style="height:6px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:{{ mProteinPct }};border-radius:4px;background:var(--ac,#C85A3E);"></div></div></div><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:var(--tx2,#6E665C);font-weight:600;">Carbs</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">{{ mCarbText }}</span></div><div style="height:6px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:{{ mCarbPct }};border-radius:4px;background:#D59645;"></div></div></div><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:var(--tx2,#6E665C);font-weight:600;">Fat</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">{{ mFatText }}</span></div><div style="height:6px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:{{ mFatPct }};border-radius:4px;background:#856CC1;"></div></div></div></div>
         </div>
       </section>
 
@@ -311,7 +311,7 @@
       <section data-screen-label="Meals" onClick="{{ goFood }}" style="grid-column:span 4;background:var(--sf,#fff);border:1px solid var(--bd,#EAE4DC);border-radius:20px;box-shadow:0 1px 2px rgba(20,16,12,.05),0 14px 30px -18px rgba(20,16,12,.13);padding:16px 18px;display:flex;flex-direction:column;min-width:0;overflow:hidden;cursor:pointer;">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex:none;"><div style="display:flex;align-items:center;gap:10px;min-width:0;"><div style="width:30px;height:30px;border-radius:9px;background:rgba(22,185,129,.14);color:#16B981;display:flex;align-items:center;justify-content:center;font-size:17px;flex:none;"><i class="ph-fill ph-fork-knife"></i></div><div style="display:flex;flex-direction:column;"><span style="font-family:Archivo;font-weight:700;font-size:14px;color:var(--tx,#201D19);letter-spacing:-.01em;line-height:1.1;">Today's Meals</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.06em;color:var(--tx3,#A69D92);margin-top:3px;text-transform:uppercase;">{{ mealCount }} planned · {{ calEaten }} kcal</span></div></div></div>
         <div style="display:flex;flex-direction:column;flex:1;justify-content:space-between;">
-<sc-for list="{{ meals }}" as="m" hint-placeholder-count="4"><div style="display:flex;align-items:center;gap:11px;"><div style="width:34px;height:34px;border-radius:10px;background:{{ m.iconBg }};color:{{ m.iconColor }};display:flex;align-items:center;justify-content:center;font-size:17px;flex:none;"><i class="{{ m.iconCls }}"></i></div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:700;color:var(--tx,#201D19);">{{ m.name }}</div><div style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--tx3,#A69D92);margin-top:1px;text-transform:uppercase;">{{ m.meta }}</div></div><div style="display:flex;align-items:center;gap:8px;"><span style="font-family:Archivo;font-weight:700;font-size:13px;color:var(--tx,#201D19);">{{ m.kcal }}</span><i class="{{ m.stateCls }}" style="font-size:17px;color:{{ m.stateColor }};"></i></div></div></sc-for>
+<sc-if value="{{ noMeals }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;flex:1;padding:14px;text-align:center;"><i class="ph ph-fork-knife" style="font-size:24px;color:var(--tx3,#A69D92);"></i><span style="font-size:12.5px;font-weight:600;color:var(--tx2,#6E665C);">No meals logged today</span><span style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx3,#A69D92);">Tap to add one</span></div></sc-if><sc-for list="{{ meals }}" as="m" hint-placeholder-count="4"><div style="display:flex;align-items:center;gap:11px;"><div style="width:34px;height:34px;border-radius:10px;background:{{ m.iconBg }};color:{{ m.iconColor }};display:flex;align-items:center;justify-content:center;font-size:17px;flex:none;"><i class="{{ m.iconCls }}"></i></div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:700;color:var(--tx,#201D19);">{{ m.name }}</div><div style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--tx3,#A69D92);margin-top:1px;text-transform:uppercase;">{{ m.meta }}</div></div><div style="display:flex;align-items:center;gap:8px;"><span style="font-family:Archivo;font-weight:700;font-size:13px;color:var(--tx,#201D19);">{{ m.kcal }}</span><i class="{{ m.stateCls }}" style="font-size:17px;color:{{ m.stateColor }};"></i></div></div></sc-for>
         </div>
       </section>
 
@@ -435,7 +435,7 @@
         <div style="flex:1;background:var(--sf,#fff);border:1px solid var(--bd,#EAE4DC);border-radius:18px;padding:18px;display:flex;align-items:center;gap:20px;box-shadow:0 1px 2px rgba(20,16,12,.05);">
           <div style="position:relative;width:128px;height:128px;flex:none;"><svg viewBox="0 0 120 120" width="128" height="128"><g transform="rotate(-90 60 60)"><circle cx="60" cy="60" r="44" fill="none" stroke="var(--sf2,#F4F1EB)" stroke-width="12"></circle><circle cx="60" cy="60" r="44" fill="none" style="stroke:var(--ac,#FA5A2A);" stroke-width="12" stroke-linecap="round" stroke-dasharray="276.46" stroke-dashoffset="{{ calOffset }}"></circle></g></svg><div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;"><span style="font-family:Archivo;font-weight:800;font-size:26px;color:var(--tx,#201D19);line-height:1;">{{ calLeft }}</span><span style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;color:var(--tx3,#A69D92);margin-top:3px;">KCAL LEFT</span></div></div>
           <div style="flex:1;min-width:0;"><div style="font-family:Archivo;font-weight:800;font-size:15px;color:var(--tx,#201D19);margin-bottom:2px;">Calories today</div><div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);margin-bottom:14px;letter-spacing:.04em;">{{ calEaten }} / {{ calGoal }} KCAL</div>
-            <div style="display:flex;flex-direction:column;gap:10px;"><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:12px;color:var(--tx2,#6E665C);font-weight:600;">Protein</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">132 / 160g</span></div><div style="height:7px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:82%;background:var(--ac,#FA5A2A);border-radius:4px;"></div></div></div><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:12px;color:var(--tx2,#6E665C);font-weight:600;">Carbs</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">190 / 240g</span></div><div style="height:7px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:79%;background:#F5A524;border-radius:4px;"></div></div></div><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:12px;color:var(--tx2,#6E665C);font-weight:600;">Fat</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">58 / 70g</span></div><div style="height:7px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:83%;background:#8B5CF6;border-radius:4px;"></div></div></div></div>
+            <div style="display:flex;flex-direction:column;gap:10px;"><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:12px;color:var(--tx2,#6E665C);font-weight:600;">Protein</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">{{ mProteinText }}</span></div><div style="height:7px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:{{ mProteinPct }};background:var(--ac,#C85A3E);border-radius:4px;"></div></div></div><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:12px;color:var(--tx2,#6E665C);font-weight:600;">Carbs</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">{{ mCarbText }}</span></div><div style="height:7px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:{{ mCarbPct }};background:#D59645;border-radius:4px;"></div></div></div><div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:12px;color:var(--tx2,#6E665C);font-weight:600;">Fat</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--tx3,#A69D92);">{{ mFatText }}</span></div><div style="height:7px;border-radius:4px;background:var(--sf2,#F4F1EB);overflow:hidden;"><div style="height:100%;width:{{ mFatPct }};background:#856CC1;border-radius:4px;"></div></div></div></div>
           </div>
         </div>
         <div style="width:260px;flex:none;background:var(--sf,#fff);border:1px solid var(--bd,#EAE4DC);border-radius:18px;padding:18px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(20,16,12,.05);">
@@ -449,7 +449,7 @@
       <div style="background:var(--sf,#fff);border:1px solid var(--bd,#EAE4DC);border-radius:18px;padding:16px 18px;box-shadow:0 1px 2px rgba(20,16,12,.05);">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;"><div style="font-family:Archivo;font-weight:800;font-size:15px;color:var(--tx,#201D19);">Today's meal plan</div><button onClick="{{ addMeal }}" style="display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 13px;border-radius:10px;background:var(--acs,rgba(250,90,42,.1));color:var(--ac,#FA5A2A);border:none;font-family:Archivo;font-weight:700;font-size:12.5px;cursor:pointer;"><i class="ph-bold ph-plus" style="font-size:14px;"></i>Add meal</button></div>
         <div style="display:flex;flex-direction:column;gap:2px;">
-<sc-for list="{{ meals }}" as="m" hint-placeholder-count="4"><div style="display:flex;align-items:center;gap:13px;padding:11px 0;border-bottom:1px solid var(--bd,#EAE4DC);"><div style="width:38px;height:38px;border-radius:11px;background:{{ m.iconBg }};color:{{ m.iconColor }};display:flex;align-items:center;justify-content:center;font-size:19px;flex:none;"><i class="{{ m.iconCls }}"></i></div><div style="flex:1;min-width:0;"><div style="font-size:13.5px;font-weight:700;color:var(--tx,#201D19);">{{ m.name }}</div><div style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--tx3,#A69D92);margin-top:1px;text-transform:uppercase;">{{ m.meta }}</div></div><span style="font-family:Archivo;font-weight:700;font-size:14px;color:var(--tx,#201D19);">{{ m.kcal }}</span><i onClick="{{ m.toggle }}" class="{{ m.stateCls }}" style="font-size:20px;color:{{ m.stateColor }};cursor:pointer;"></i></div></sc-for>
+<sc-if value="{{ noMeals }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;align-items:center;gap:7px;padding:26px 14px;text-align:center;"><i class="ph ph-fork-knife" style="font-size:26px;color:var(--tx3,#A69D92);"></i><span style="font-size:13px;font-weight:700;color:var(--tx,#201D19);">No meals for today yet</span><span style="font-size:11.5px;color:var(--tx3,#A69D92);">Use “Add meal” to plan your day.</span></div></sc-if><sc-for list="{{ meals }}" as="m" hint-placeholder-count="4"><div style="display:flex;align-items:center;gap:13px;padding:11px 0;border-bottom:1px solid var(--bd,#EAE4DC);"><div style="width:38px;height:38px;border-radius:11px;background:{{ m.iconBg }};color:{{ m.iconColor }};display:flex;align-items:center;justify-content:center;font-size:19px;flex:none;"><i class="{{ m.iconCls }}"></i></div><div style="flex:1;min-width:0;"><div style="font-size:13.5px;font-weight:700;color:var(--tx,#201D19);">{{ m.name }}</div><div style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--tx3,#A69D92);margin-top:1px;text-transform:uppercase;">{{ m.meta }}</div></div><span style="font-family:Archivo;font-weight:700;font-size:14px;color:var(--tx,#201D19);">{{ m.kcal }}</span><i onClick="{{ m.toggle }}" class="{{ m.stateCls }}" style="font-size:20px;color:{{ m.stateColor }};cursor:pointer;"></i></div></sc-for>
         </div>
       </div>
     </div>
@@ -498,10 +498,29 @@
     <div style="display:flex;flex-direction:column;gap:16px;">
       <div style="background:var(--sf,#fff);border:1px solid var(--bd,#EAE4DC);border-radius:18px;padding:18px;box-shadow:0 1px 2px rgba(20,16,12,.05);">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><div style="width:30px;height:30px;border-radius:9px;background:var(--acs,rgba(200,90,62,.12));color:var(--ac,#C85A3E);display:flex;align-items:center;justify-content:center;font-size:17px;"><i class="ph-fill ph-camera"></i></div><div style="font-family:Archivo;font-weight:800;font-size:15px;color:var(--tx,#201D19);">Progress photos</div></div>
-        <div style="font-size:12px;color:var(--tx3,#A69D92);margin:0 0 14px 40px;">Drop before &amp; after photos to track your transformation — tap to replace, hover to remove.</div>
+        <div style="font-size:12px;color:var(--tx3,#A69D92);margin:0 0 14px 40px;">Add before &amp; after photos to track your transformation — always 4:5 portrait. Tap Change to replace, or the bin to remove.</div>
         <div class="colrow" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-          <div style="display:flex;flex-direction:column;gap:7px;"><div class="photoslot" style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;border:1.5px dashed color-mix(in srgb, var(--ac,#C85A3E) 42%, var(--bd));background:color-mix(in srgb, var(--ac,#C85A3E) 7%, var(--sf));"><image-slot id="body-before" shape="rounded" radius="16" placeholder="Before · drop photo"></image-slot></div><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx3,#A69D92);text-align:center;">Before · Wk 20</span></div>
-          <div style="display:flex;flex-direction:column;gap:7px;"><div class="photoslot" style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;border:1.5px dashed color-mix(in srgb, var(--ac,#C85A3E) 42%, var(--bd));background:color-mix(in srgb, var(--ac,#C85A3E) 7%, var(--sf));"><image-slot id="body-after" shape="rounded" radius="16" placeholder="After · drop photo"></image-slot></div><span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx3,#A69D92);text-align:center;">Now · Wk 28</span></div>
+          <sc-for list="{{ bodyPhotos }}" as="p" hint-placeholder-count="2">
+            <div style="display:flex;flex-direction:column;gap:7px;min-width:0;">
+              <div class="photoslot" style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;border:1.5px dashed color-mix(in srgb, var(--ac,#C85A3E) 42%, var(--bd));background:color-mix(in srgb, var(--ac,#C85A3E) 7%, var(--sf));">
+                <sc-if value="{{ p.noPhoto }}" hint-placeholder-val="{{ true }}">
+                  <div onClick="{{ p.pick }}" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;padding:12px;text-align:center;">
+                    <i class="ph-fill ph-camera" style="font-size:26px;color:var(--ac,#C85A3E);"></i>
+                    <span style="font-size:12px;font-weight:600;color:var(--tx2,#6E665C);">{{ p.hint }}</span>
+                    <span style="font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--tx3,#A69D92);">4 : 5 portrait</span>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ p.hasPhoto }}" hint-placeholder-val="{{ false }}">
+                  <div role="img" aria-label="Progress photo" data-photo="{{ p.key }}" style="position:absolute;inset:0;background-size:cover;background-position:center;"></div>
+                  <div style="position:absolute;left:8px;right:8px;bottom:8px;display:flex;gap:6px;justify-content:center;">
+                    <button onClick="{{ p.pick }}" style="flex:1;min-width:0;height:32px;border:none;border-radius:9px;background:rgba(20,16,12,.66);color:#fff;font-family:Archivo;font-weight:700;font-size:11.5px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px;"><i class="ph-bold ph-arrows-clockwise" style="font-size:13px;"></i>Change</button>
+                    <button onClick="{{ p.remove }}" title="Remove photo" style="width:32px;height:32px;flex:none;border:none;border-radius:9px;background:rgba(228,87,46,.9);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;"><i class="ph-fill ph-trash" style="font-size:14px;"></i></button>
+                  </div>
+                </sc-if>
+              </div>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx3,#A69D92);text-align:center;">{{ p.caption }}</span>
+            </div>
+          </sc-for>
         </div>
       </div>
       <div style="background:var(--sf,#fff);border:1px solid var(--bd,#EAE4DC);border-radius:18px;padding:18px;box-shadow:0 1px 2px rgba(20,16,12,.05);">
@@ -819,6 +838,7 @@
   </sc-if>
 
   <input type="file" accept="image/*" ref="{{ avatarRef }}" onChange="{{ onAvatar }}" style="display:none;" />
+  <input type="file" accept="image/*" ref="{{ photoInputRef }}" onChange="{{ onPhotoFile }}" style="display:none;" />
   <input type="file" accept="application/json,.json" ref="{{ fileRef }}" onChange="{{ onRestore }}" style="display:none;" />
 </div>
 </x-dc>
@@ -870,23 +890,39 @@ class Component extends DCLogic {
         return { date:dt, name:w.name, detail:w.detail, time:selfC.to12h(w.time24), time24:w.time24, icon:w.icon, done:(dt < TODAY0) };
       }),
       meals:[
-        { date:TODAY0, name:'Oats & Berries', type:'Breakfast', time:'8:00 AM', kcal:420, done:true, icon:'ph-bowl-food', color:'#D59645' },
-        { date:TODAY0, name:'Chicken Quinoa Bowl', type:'Lunch', time:'12:30 PM', kcal:610, done:true, icon:'ph-bowl-food', color:'#6C9A5E' },
-        { date:TODAY0, name:'Greek Yogurt + Nuts', type:'Snack', time:'3:30 PM', kcal:180, done:false, icon:'ph-cookie', color:'#856CC1' },
-        { date:TODAY0, name:'Salmon & Greens', type:'Dinner', time:'7:00 PM', kcal:630, done:false, icon:'ph-fish', color:'#5E8EBF' }
+        { name:'Oats & Berries', type:'Breakfast', time:'8:00 AM', kcal:420, p:28, c:55, f:9, done:true, icon:'ph-bowl-food', color:'#D59645' },
+        { name:'Chicken Quinoa Bowl', type:'Lunch', time:'12:30 PM', kcal:610, p:48, c:60, f:16, done:true, icon:'ph-bowl-food', color:'#6C9A5E' },
+        { name:'Greek Yogurt + Nuts', type:'Snack', time:'3:30 PM', kcal:180, p:18, c:12, f:8, done:false, icon:'ph-cookie', color:'#856CC1' },
+        { name:'Salmon & Greens', type:'Dinner', time:'7:00 PM', kcal:630, p:42, c:30, f:28, done:false, icon:'ph-fish', color:'#5E8EBF' }
       ]
     };
     this._defaults = defaults;
     var pristine = (ls('pristine','1') !== '0');
     this._pristine = pristine;
     var saved = lsj('data', null) || {};
+    try{
+      if (saved && saved.meals && saved.meals.length) {
+        var seedMacros = {
+          'Oats & Berries':{p:28,c:55,f:9}, 'Chicken Quinoa Bowl':{p:48,c:60,f:16},
+          'Greek Yogurt + Nuts':{p:18,c:12,f:8}, 'Salmon & Greens':{p:42,c:30,f:28}
+        };
+        saved.meals = saved.meals.map(function(m){
+          if (!m || !seedMacros[m.name]) return m;
+          var o = Object.assign({}, m);
+          delete o.date;
+          if (o.p == null) { o.p = seedMacros[m.name].p; o.c = seedMacros[m.name].c; o.f = seedMacros[m.name].f; }
+          return o;
+        });
+      }
+    }catch(e){}
     if (saved && saved.units == null) saved.units = 'metric';
     if (saved && saved.weightUnit == null) saved.weightUnit = 'kg';
-    // PRISTINE: sample data re-bases onto the real date every load. Once the user edits
-    // their own entries we never re-seed, so their data is never overwritten.
-    var initialData = pristine
-      ? Object.assign({}, defaults, { units:saved.units || 'metric', weightUnit:saved.weightUnit || 'kg' })
-      : Object.assign({}, defaults, saved);
+    // Sample data is seeded ONCE, on the very first open, rebased onto that day.
+    // After that the saved copy always wins — an in-use planner is never reseeded.
+    var hasSaved = !!(saved && saved.workouts && saved.workouts.length);
+    var initialData = hasSaved
+      ? Object.assign({}, defaults, saved)
+      : Object.assign({}, defaults, { units:(saved && saved.units) || 'metric', weightUnit:(saved && saved.weightUnit) || 'kg' });
     this.state = {
       tab: ls('tab','home'),
       avatar: ls('avatar',''), profileOpen:false,
@@ -898,7 +934,7 @@ class Component extends DCLogic {
       weekStart:seedMon, moreOpen:false,
       wkOpen:false, wkIndex:-1, wkDraft:{ name:'', detail:'Workout', date:TODAY0, time24:'18:00', icon:'ph-barbell', done:false },
       editBody:false, addMealOpen:false, mealDraft:{ name:'', kcal:'', type:'Snack', date:TODAY0 },
-      searchOpen:false, searchQ:'',
+      searchOpen:false, searchQ:'', photos: lsj('photos', {}),
       toast: ''
     };
     this.setRoot = (el) => { this.root = el; if (el) this.applyTheme(); };
@@ -937,6 +973,30 @@ class Component extends DCLogic {
     this.onMealDraft = (key) => (e) => { var v = e.target.value; this.setState(function(s){ var m = Object.assign({}, s.mealDraft); m[key] = v; return { mealDraft:m }; }); };
     this.saveMeal = () => { var m = this.state.mealDraft; var name = (m.name||'').trim(); var kcal = parseInt(m.kcal, 10); if (!name || isNaN(kcal)) { this.showToast('Enter a name and calories'); return; } var date = m.date || this.TODAY; var meals = this.state.data.meals.slice(); meals.push({ date:date, name:name, type:(m.type||'Snack'), time:'—', kcal:kcal, done:false, icon:'ph-fork-knife', color:'#16B981' }); this.setData({ meals: meals }); this.setState({ addMealOpen:false }); this.showToast(date===this.TODAY ? 'Meal added to today' : 'Meal added for ' + this.labelISO(date)); };
     this.stop = (e) => { if (e && e.stopPropagation) e.stopPropagation(); };
+    this.photoInputRef = (el) => { this.photoEl = el; };
+    this.pickPhoto = (k) => (e) => { if(e&&e.stopPropagation) e.stopPropagation(); this._photoKey = k; if (this.photoEl) { this.photoEl.value=''; this.photoEl.click(); } };
+    this.setPhoto = (k, url) => { this.setState(function(s){ var p = Object.assign({}, s.photos); p[k] = url; return { photos:p }; }, () => this.savePhotos()); };
+    this.removePhoto = (k) => (e) => { if(e&&e.stopPropagation) e.stopPropagation(); this.setState(function(s){ var p = Object.assign({}, s.photos); delete p[k]; return { photos:p }; }, () => this.savePhotos()); this.showToast('Photo removed'); };
+    this.onPhotoFile = (e) => {
+      var f = e.target.files && e.target.files[0]; if (!f) return;
+      var self0 = this, key = this._photoKey || 'before';
+      var r = new FileReader();
+      r.onload = function(){
+        var img = new Image();
+        img.onload = function(){
+          try{
+            var max = 900, w = img.width, h = img.height, sc = Math.min(1, max/Math.max(w,h));
+            var c = document.createElement('canvas'); c.width = Math.round(w*sc); c.height = Math.round(h*sc);
+            c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+            self0.setPhoto(key, c.toDataURL('image/jpeg', 0.82));
+          }catch(err){ self0.setPhoto(key, r.result); }
+          self0.showToast('Photo saved');
+        };
+        img.onerror = function(){ self0.setPhoto(key, r.result); self0.showToast('Photo saved'); };
+        img.src = r.result;
+      };
+      r.readAsDataURL(f);
+    };
     this.readProfiles = () => { try{ return JSON.parse(localStorage.getItem('wp.fp.profiles')||'[]'); }catch(e){ return []; } };
     this.activeId = () => { try{ return localStorage.getItem('wp.fp.active')||''; }catch(e){ return ''; } };
     this.switchProfile = (id) => () => { try{ localStorage.setItem('wp.fp.active', id); location.reload(); }catch(e){} };
@@ -987,7 +1047,7 @@ class Component extends DCLogic {
     this.closeWk = () => this.setState({ wkOpen:false });
     this.onWk = (key) => (e) => { var v=e.target.value; this.setState(function(s){ var o={}; o[key]=v; return { wkDraft: Object.assign({}, s.wkDraft, o) }; }); };
     this.toggleWkDone = () => this.setState(function(s){ return { wkDraft: Object.assign({}, s.wkDraft, { done: !s.wkDraft.done }) }; });
-    this.onSleep = (key) => (e) => { var v=e.target.value; this.setState(function(s){ var sl=Object.assign({}, s.data.sleep); sl[key]=v; return { data: Object.assign({}, s.data, { sleep: sl }) }; }, () => this.saveData()); };
+    this.onSleep = (key) => (e) => { var v=e.target.value; this.markDirty(); this.setState(function(s){ var sl=Object.assign({}, s.data.sleep); sl[key]=v; return { data: Object.assign({}, s.data, { sleep: sl }) }; }, () => this.saveData()); };
     this.saveWk = () => { var dr=this.state.wkDraft; var name=(dr.name||'').trim(); if(!name){ this.showToast('Enter a workout name'); return; } var entry={ date:(dr.date||this.TODAY), name:name, detail:(dr.detail||'Workout'), time:this.to12h(dr.time24), time24:dr.time24, icon:(dr.icon||'ph-barbell'), done:dr.done }; var list=this.state.data.workouts.slice(); var editing=this.state.wkIndex>=0; if(editing){ list[this.state.wkIndex]=entry; } else { list.push(entry); } this.setData({ workouts:list }); this.setState({ wkOpen:false, weekStart:this.mondayISO(entry.date) }); this.showToast(editing?'Workout updated':'Workout added'); };
     this.deleteWk = () => { var i=this.state.wkIndex; if(i<0){ this.setState({wkOpen:false}); return; } var list=this.state.data.workouts.slice(); list.splice(i,1); this.setData({ workouts:list }); this.setState({ wkOpen:false }); this.showToast('Workout deleted'); };
     this.prevYear = () => this.setState(function(s){ return { calYear:s.calYear-1 }; });
@@ -1015,6 +1075,18 @@ class Component extends DCLogic {
   }
   save(k,v){ try{ localStorage.setItem(this.PFX+k, v); }catch(e){} }
   markDirty(){ if(this._pristine){ this._pristine=false; try{ localStorage.setItem(this.PFX+'pristine','0'); }catch(e){} } }
+  paintPhotos(){
+    try{
+      var ph = this.state.photos || {};
+      var els = document.querySelectorAll('[data-photo]');
+      for (var i = 0; i < els.length; i++){
+        var k = els[i].getAttribute('data-photo');
+        var u = ph[k] || '';
+        els[i].style.backgroundImage = u ? 'url("' + u + '")' : 'none';
+      }
+    }catch(e){}
+  }
+  savePhotos(){ try{ localStorage.setItem(this.PFX+'photos', JSON.stringify(this.state.photos||{})); }catch(e){ this.showToast('Photo too large to store'); } }
   saveData(){ try{ localStorage.setItem(this.PFX+'data', JSON.stringify(this.state.data)); }catch(e){} }
   showToast(msg){ this.setState({ toast: msg }); clearTimeout(this._tt); this._tt = setTimeout(() => this.setState({ toast: '' }), 3600); }
   firstName(){ return (this.state.name||'').trim().split(/\s+/)[0] || 'there'; }
@@ -1045,6 +1117,7 @@ class Component extends DCLogic {
     };
     window.addEventListener('keydown', this.keyHandler);
     if (this._pristine) this.saveData();
+    this.paintPhotos();
     this.applyTheme();
   }
   componentWillUnmount(){
@@ -1053,6 +1126,7 @@ class Component extends DCLogic {
     clearTimeout(this._tt);
   }
   componentDidUpdate(prev){
+    this.paintPhotos();
     if (this.state.searchOpen && !this._so && this.searchInput) { var el = this.searchInput; setTimeout(function(){ try{ el.focus(); }catch(e){} }, 20); }
     this._so = this.state.searchOpen;
     if (prev.theme !== this.props.theme && this.props.theme) { this.setState({ theme: this.props.theme }); this.save('theme', this.props.theme); return; }
@@ -1153,8 +1227,16 @@ class Component extends DCLogic {
     var axis2 = mnShort[this.isoParse(this.isoAdd(TODAY,-28)).getMonth()] + ' ' + this.isoParse(this.isoAdd(TODAY,-28)).getDate();
     var md = this.state.mealDraft || { name:'', kcal:'', type:'Snack', date:TODAY };
     var todayMeals = [];
-    d.meals.forEach(function(m,i){ if((m.date||TODAY)===TODAY) todayMeals.push({ m:m, i:i }); });
+    d.meals.forEach(function(m,i){ if(!m.date || m.date===TODAY) todayMeals.push({ m:m, i:i }); });
     var calEaten = todayMeals.reduce(function(a,o){ return a + (o.m.kcal||0); }, 0);
+    var macroGoals = { p:(d.proteinGoal||160), c:(d.carbGoal||240), f:(d.fatGoal||70) };
+    var macroTot = todayMeals.reduce(function(a,o){ a.p+=(o.m.p||0); a.c+=(o.m.c||0); a.f+=(o.m.f||0); return a; }, {p:0,c:0,f:0});
+    var pctOf = function(v,g){ return Math.min(100, Math.round((g? v/g:0)*100)) + '%'; };
+    var macros = {
+      pText:(macroTot.p + ' / ' + macroGoals.p + 'g'), pPct:pctOf(macroTot.p, macroGoals.p),
+      cText:(macroTot.c + ' / ' + macroGoals.c + 'g'), cPct:pctOf(macroTot.c, macroGoals.c),
+      fText:(macroTot.f + ' / ' + macroGoals.f + 'g'), fPct:pctOf(macroTot.f, macroGoals.f)
+    };
     var calLeft = Math.max(0, d.calGoal - calEaten);
     var calPct = d.calGoal ? Math.min(100, Math.round(calEaten / d.calGoal * 100)) : 0;
     var C44 = 2 * Math.PI * 44;
@@ -1333,7 +1415,8 @@ class Component extends DCLogic {
       dWeight:this.dispW(d.weight), dBodyFat:d.bodyFat, dWaist:this.dispLen(d.waist), dChest:this.dispLen(d.chest), dArms:this.dispLen(d.arms), dHips:this.dispLen(d.hips), wUnit:wkUnit, lenUnit:lenUnit, dLean:this.dispW(Math.round(d.weight*(1-d.bodyFat/100)*10)/10), dFat:this.dispW(Math.round(d.weight*(d.bodyFat/100)*10)/10),
       waterPct:(waterPct + '%'), waterL:(d.water/1000).toFixed(1), waterGoalL:(d.waterGoal/1000).toFixed(1), waterDrops:waterDrops,
       calEaten:calEaten.toLocaleString('en-US'), calGoal:d.calGoal.toLocaleString('en-US'), calLeft:calLeft.toLocaleString('en-US'), calPct:(calPct + '%'), calDash:C44.toFixed(2), calOffset:calOffset,
-      meals:mealsView, mealCount:d.meals.length,
+      meals:mealsView, mealCount:todayMeals.length, noMeals:(todayMeals.length===0),
+      mProteinText:macros.pText, mProteinPct:macros.pPct, mCarbText:macros.cText, mCarbPct:macros.cPct, mFatText:macros.fText, mFatPct:macros.fPct,
       editBody:this.state.editBody, openEditBody:this.openEditBody, closeEditBody:this.closeEditBody, stop:this.stop,
       onWeight:this.onBodyU('weight','w'), onBodyFat:this.onBody('bodyFat'), onWaist:this.onBodyU('waist','len'), onChest:this.onBodyU('chest','len'), onArms:this.onBodyU('arms','len'), onHips:this.onBodyU('hips','len'),
       vWeight:this.dispW(d.weight), vBodyFat:d.bodyFat, vWaist:this.dispLen(d.waist), vChest:this.dispLen(d.chest), vArms:this.dispLen(d.arms), vHips:this.dispLen(d.hips),
@@ -1400,6 +1483,15 @@ class Component extends DCLogic {
       wkName:this.state.wkDraft.name, wkDetail:this.state.wkDraft.detail, wkTime24:this.state.wkDraft.time24, wkIcon:this.state.wkDraft.icon, wkDateLabel:this.labelISO(this.state.wkDraft.date || TODAY), wkDone:this.state.wkDraft.done,
       wkDoneCls:(this.state.wkDraft.done ? 'ph-fill ph-check-square' : 'ph ph-square'), wkDoneColor:(this.state.wkDraft.done ? 'var(--ac,#FA5A2A)' : 'var(--tx3,#A69D92)'), wkDoneText:(this.state.wkDraft.done ? 'Completed' : 'Mark as completed'),
       onBedtime:this.onSleep('bedtime'), onWake:this.onSleep('wake'), bedtime:d.sleep.bedtime, wake:d.sleep.wake, sleepDur:sleepDur,
+      photoInputRef:this.photoInputRef, onPhotoFile:this.onPhotoFile,
+      bodyPhotos:[
+        { key:'before', hint:'Before · add photo', caption:'Before · Wk 20' },
+        { key:'after', hint:'Now · add photo', caption:'Now · Wk 28' }
+      ].map(function(o){
+        var url = (self.state.photos || {})[o.key] || '';
+        return { key:o.key, url:url, hasPhoto:!!url, noPhoto:!url, hint:o.hint, caption:o.caption,
+          pick:self.pickPhoto(o.key), remove:self.removePhoto(o.key) };
+      }),
       searchOpen:this.state.searchOpen, openSearch:this.openSearch, axis1:axis1, axis2:axis2, axis3:todayShort, todayShort:todayShort, closeSearch:this.closeSearch, onSearch:this.onSearch, searchQ:this.state.searchQ, searchInputRef:this.setSearchInput,
       searchResults:searchResults, hasSearchResults:(searchResults.length > 0), noSearchResults:(sq.length > 0 && searchResults.length === 0), searchIdle:(sq.length === 0),
       hasToast: !!this.state.toast, toast:this.state.toast
